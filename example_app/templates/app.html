@@ -1,0 +1,49 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+  <head>
+    <title>DERMS Bot</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}"/>
+  </head>
+  <body>
+
+    {% include 'nav.html' %}
+
+    <div class="container">
+
+      <div class="jumbotron mt-1">
+        <h1 class="jumbotron-heading text-xs-center">DERMS Robot</h1>
+        <button class="btn btn-primary start-listen" value="Start voice commands">Enable Listening</button>
+        <p class="lead text-xs-center">
+          Talk or chat with me ...
+        </p>
+
+        <hr class="my-2">
+
+        <div class="row">
+          <div class="col-xs-6 offset-xs-3">
+            <ul class="list-group chat-log js-chat-log">
+            </ul>
+
+            <div class="input-group input-group-lg mt-1">
+              <input type="text" class="form-control js-text" placeholder="Type or say something am listening..."/>
+              <span class="input-group-btn">
+                <button class="btn btn-primary js-say">Submit</button>
+              </span>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/js.cookie.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/artyom.window.min.js' %}"></script>
+    <script src="{% static 'js/sid.js' %}"></script>
+  </body>
+</html>
